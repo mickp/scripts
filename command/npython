@@ -1,0 +1,4 @@
+#!sh
+export PYTHONPATH=/c/WinPython-64bit-2.7.6.4/python-2.7.6.amd64/
+export PATH=$PATH:$PYTHONPATH:/c/command/python.net
+npython.exe
