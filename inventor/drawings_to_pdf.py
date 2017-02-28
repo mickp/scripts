@@ -46,15 +46,6 @@ for i in range(1, docs.Count+1):
         status = "%s\t-->  %s" % (filename, outname)
         processed.append(status)
         print(status)
-        # Export referenced parts as STEP files.
-        for part in doc.AllReferencedDocuments:
-            if part.DocumentType == constants.kPartDocumentObject:
-                refpath, reffilename = os.path.split(part.FullFileName)
-                outname = '.'.join(reffilename.split('.')[0:-1] + ['step'])
-                doc.SaveAs(os.path.join(path, outname), True)
-                status = "\t%s\t-->  %s" % (reffilename, outname)
-                processed.append(status)
-                print(status)
     else:
         skipped.append(filename)
 
